@@ -20,10 +20,9 @@ import {
   MapPin,
   GraduationCap,
   Briefcase,
-  FolderKanban, 
-  CircleDot, 
+  FolderKanban,
+  CircleDot,
 } from "lucide-react";
-
 
 const GlitchText = ({ children, className = "" }) => {
   return (
@@ -170,7 +169,6 @@ const InfoItem = ({ icon, label, value, highlight = false }) => {
   );
 };
 
-
 const SkillCard = ({ title, icon, description }) => (
   <motion.div
     whileHover={{ y: -5 }}
@@ -274,9 +272,8 @@ function App() {
     }, 300);
   };
 
-
   const achievements = [
-    { label: "Projects Completed", value:10, suffix: "+" },
+    { label: "Projects Completed", value: 10, suffix: "+" },
     { label: "GitHub Contributions", value: 100, suffix: "+" },
     { label: "Hackathons Won", value: 1, suffix: "" },
     { label: "Internships", value: 2, suffix: "" },
@@ -294,7 +291,7 @@ function App() {
           exit={{ opacity: 0 }}
           className="min-h-screen bg-gray-950 text-white relative overflow-x-hidden"
         >
-          <Navigation  />
+          <Navigation />
 
           <section
             id="home"
@@ -449,9 +446,7 @@ function App() {
                           </li>
                           <li className="flex items-start">
                             <span className="text-green-400 mr-2 mt-1">▸</span>
-                            <span>
-                              Implement robust testing
-                            </span>
+                            <span>Implement robust testing</span>
                           </li>
                         </ul>
                       </div>
@@ -664,7 +659,7 @@ function App() {
           >
             <div className="max-w-7xl mx-auto">
               <ProjectsSection projects={sampleProjects} />
-              {/* GitHub Contribution Graph */}// TODO: manage this section
+              {/* GitHub Contribution Graph// TODO: manage this section
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -675,7 +670,7 @@ function App() {
                   Open Source Contributions
                 </h3>
                 <GitHubContributionGraph />
-              </motion.div>
+              </motion.div> */}
             </div>
           </section>
 
@@ -772,7 +767,7 @@ function App() {
                     </motion.a>
                     <motion.a
                       href="/resume.pdf"
-                      download ="SuvidhJain_Resume.pdf"
+                      download="SuvidhJain_Resume.pdf"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-3 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-gray-950 transition-all"
@@ -798,7 +793,8 @@ function App() {
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="text-center md:text-left">
                   <p className="text-gray-400 font-mono text-sm">
-                    &copy; 2024 Suvidh Jain | Crafted with React v.19 + Tailwind CSS v4
+                    &copy; 2024 Suvidh Jain | Crafted with React v.19 + Tailwind
+                    CSS v4
                   </p>
                   <p className="text-gray-500 text-xs mt-1">
                     Last updated: {new Date().toLocaleDateString()}
@@ -856,6 +852,5 @@ function App() {
     </AnimatePresence>
   );
 }
-
 
 export default App;

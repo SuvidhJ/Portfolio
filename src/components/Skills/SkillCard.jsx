@@ -3,7 +3,9 @@ import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 import { Popover, Transition } from "@headlessui/react";
 
+
 export default function SkillCard({ skill }) {
+    const Icon = skill.icon;
   return (
     <Popover className="relative inline-block w-full">
       <Popover.Button
@@ -13,8 +15,8 @@ export default function SkillCard({ skill }) {
         whileTap={{ scale: 0.98 }}
         aria-label={`More info about ${skill.name}`}
       >
-        <img
-          src={skill.logo}
+        <Icon 
+          style={{ color: skill.color }}
           alt={`${skill.name} logo`}
           className="w-12 h-12 mb-2 drop-shadow-lg"
           loading="lazy"
